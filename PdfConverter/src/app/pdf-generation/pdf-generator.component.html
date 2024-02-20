@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="center">
+    <input type="text" [(ngModel)]="url" placeholder="Enter URL">
+    <button (click)="generatePdf()" [disabled]="loading">
+      <span *ngIf="loading">Generating...</span>
+      <span *ngIf="!loading">Generate PDF</span>
+    </button>
+    <p *ngIf="error" class="error">{{ error }}</p>
+    <p *ngIf="!loading">Convert any web page to PDF - just enter the URL and Generate PDF!</p>
+    <div class="popup" *ngIf="loading">
+      <div class="loader"></div>
+      <p>Please wait for a while !!</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
